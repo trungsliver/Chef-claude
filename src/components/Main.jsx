@@ -1,29 +1,44 @@
 import ReactDOM from "react-dom/client"
 
 export default function Main() {
-    function handleClick(event) {
-        event.preventDefault();
-        console.log("button clicked 123");
+    const ingredients = ["Cheese", "Tomato", "Basil"];
+    const ingredientsListItems = ingredients.map((ingredient, index) => (
+        <li key={index}>{ingredient}</li>
+    ));
+
+    function updateIngredients() {
+        ingredients.map((ingredient, index) => (
+                    <li key={index}>{ingredient}</li>
+                ))
     }
 
-    function handleMouseOver() {
-        console.log("mouse over")
+    function handleSubmit(event) {
+        event.preventDefault();
+        console.log("form submitted")
+        const formData = new FormData(event.target);
+        const newIngredient = formData.get("ingredient");
+        console.log(newIngredient);
+        ingredients.push(newIngredient);
+        console.log(ingredients);
     }
     
     return (
         <main>
-            <form className="add-ingredient-form">
+            <form onSubmit={handleSubmit} className="add-ingredient-form" >
                 <input 
+                        id="ingredient-input"
                         type="text" 
                         placeholder="e.g oregano" 
-                        aria-label="Add ingredient"/>
-                <button 
-                    type="button"
-                    onClick={handleClick}
-                    onMouseOver={handleMouseOver}>
+                        aria-label="Add ingredient"
+                        name="ingredient"/>
+                <button type="submit">
                         + Add ingredient
                 </button>
             </form>
+
+            <ul className="ingredient-list">
+                {ingredientsListItems}
+            </ul>
         </main>
     )
 }
