@@ -6,6 +6,7 @@ import Header from './components/Header'
 import Main from './components/Main'
 import Counter from './components/Counter'
 import ComplexArray from './components/ComplexArray'
+import ComplexObject from './components/ComplexObject'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Main />
       {/* <Counter />
       <ComplexArray /> */}
+      <ComplexObject /> 
     </>
   )
 }
