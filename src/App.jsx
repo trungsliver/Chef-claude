@@ -7,6 +7,7 @@ import Main from './components/Main'
 import Counter from './components/Counter'
 import ComplexArray from './components/ComplexArray'
 import ComplexObject from './components/ComplexObject'
+import SignupForm from './components/SignupForm'
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
       <Main />
       {/* <Counter />
       <ComplexArray /> */}
-      <ComplexObject /> 
+      {/* <ComplexObject />  */}
+      <SignupForm />
     </>
   )
 }

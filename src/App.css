@@ -79,7 +79,7 @@ header {
 /* ================ Main ================ */
 main {
   width: 100%;
-  min-height: 100px;
+  min-height: 300px;
   padding: 10px 30px;
   display: flex;
   flex-direction: column;
@@ -223,4 +223,51 @@ main {
 .card .favorite-button:active {
     transform: none;
     box-shadow: none;
+}
+
+/* ============ Signup Form ============= */
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+} 
+
+.signup-form form label {
+  width: 80px;
+  text-align: right;
+}
+
+.signup-form form input{
+  padding: 8px;
+  margin: 0 10px 15px;
+  background-color: white;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  box-sizing: border-box;
+  height: 40px;
+  flex-grow: 1;
+  min-width: 200px;
+  max-width: 400px;
+  color: #141413;
+}
+
+.signup-form form button {
+  padding: 8px 16px;
+  background-color: #141413;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  height: 40px;
+  min-width: 160px;
+  font-size: 0.875rem;
 }
