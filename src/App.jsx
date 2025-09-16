@@ -5,6 +5,7 @@ import './App.css'
 import Header from './components/Header'
 import Main from './components/Main'
 import Counter from './components/Counter'
+import ComplexArray from './components/ComplexArray'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Header />
       <Main />
       <Counter />
+      <ComplexArray />
     </>
   )
 }

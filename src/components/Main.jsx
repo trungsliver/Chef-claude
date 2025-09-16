@@ -6,9 +6,10 @@ export default function Main() {
     const ingredientsListItems = ingredients.map((ingredient, index) => (
         <li key={index}>{ingredient}</li>
     ));
+    const [listItems, setListItems] = React.useState(ingredientsListItems);
 
     function updateIngredients() {
-        ingredients.map((ingredient, index) => (
+        return ingredients.map((ingredient, index) => (
                     <li key={index}>{ingredient}</li>
                 ))
     }
@@ -21,6 +22,7 @@ export default function Main() {
         console.log(newIngredient);
         ingredients.push(newIngredient);
         console.log(ingredients);
+        setListItems(updateIngredients());
     }
     
     return (
@@ -38,7 +40,8 @@ export default function Main() {
             </form>
 
             <ul className="ingredient-list">
-                {ingredientsListItems}
+                {/* {ingredientsListItems} */}
+                {listItems}
             </ul>
         </main>
     )
