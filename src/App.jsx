@@ -12,8 +12,8 @@ function App() {
     <>
       <Header />
       <Main />
-      <Counter />
-      <ComplexArray />
+      {/* <Counter />
+      <ComplexArray /> */}
     </>
   )
 }
