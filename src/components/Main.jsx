@@ -20,11 +20,24 @@ export default function Main() {
         );
         document.getElementById("ingredient-input").value = "";
     }
+
+    function addIngredients(formData) {
+        const newIngredient = formData.get("ingredient");
+        setIngredients(
+            prevIngredients => [
+                ...prevIngredients,
+                newIngredient   
+            ]
+        );
+    }
     
     return (
         <main>
-            <form onSubmit={handleSubmit} className="add-ingredient-form" >
-                <input 
+            <form 
+            // onSubmit={handleSubmit} 
+            action={addIngredients}
+            className="add-ingredient-form" >
+                <input
                         id="ingredient-input"
                         type="text" 
                         placeholder="e.g oregano" 
