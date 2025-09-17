@@ -11,18 +11,24 @@ export default function SignupForm() {
     }
 
     function signUp(formData) {
-        const email = formData.get("email");
-        const password = formData.get("password");
-        console.log("form submitted 2", { email, password });
-        // radio buttons
-        const employmentStatus = formData.get("employmentStatus");
-        console.log("employmentStatus: ", employmentStatus);
-        // checkboxes
+        // const email = formData.get("email");
+        // const password = formData.get("password");
+        // console.log("form submitted 2", { email, password });
+        // // radio buttons
+        // const employmentStatus = formData.get("employmentStatus");
+        // console.log("employmentStatus: ", employmentStatus);
+        // // checkboxes
+        // const dietaryRestrictions = formData.getAll("dietaryRestrictions");
+        // console.log("dietaryRestrictions: ", dietaryRestrictions);
+        // // select & options
+        // const favColor = formData.get("favColor");
+        // console.log("favColor: ", favColor);
+
+        // get all form data as an object
+        const data = Object.fromEntries(formData);
         const dietaryRestrictions = formData.getAll("dietaryRestrictions");
-        console.log("dietaryRestrictions: ", dietaryRestrictions);
-        // select & options
-        const favColor = formData.get("favColor");
-        console.log("favColor: ", favColor);
+        const fullData = { ...data, dietaryRestrictions };
+        console.log("form submitted 2", fullData);
     }
 
     return (
