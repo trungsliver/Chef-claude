@@ -240,13 +240,17 @@ main {
 } 
 
 .signup-form form label {
-  width: 80px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 100px;
   text-align: right;
 }
 
-.signup-form form input{
+.signup-form form input, textarea{
+  display: inline-block;
+  vertical-align: middle;
   padding: 8px;
-  margin: 0 10px 15px;
+  margin: 10px;
   background-color: white;
   border: 1px solid #d1d5db;
   border-radius: 6px;
@@ -261,6 +265,7 @@ main {
 
 .signup-form form button {
   padding: 8px 16px;
+  margin-top: 15px;
   background-color: #141413;
   color: white;
   border: none;
@@ -270,4 +275,5 @@ main {
   height: 40px;
   min-width: 160px;
   font-size: 0.875rem;
+  
 }

@@ -21,11 +21,17 @@ export default function SignupForm() {
       <h2>Signup form</h2>
       <form action={signUp} onSubmit={signUpHandler}>
         <label htmlFor="email">Email:</label>
-        <input id="email" type="email" name="email" placeholder="joe@schmoe.com" />
+        <input id="email" type="email" name="email" placeholder="joe@schmoe.com" defaultValue="trung@gmail.com"/>
         <br />
+
         <label htmlFor="password">Password:</label>
         <input id="password" type="password" name="password" placeholder="must be at least 8 characters" />
         <br />
+
+        <label htmlFor="description">Description:</label>
+        <textarea id="description" name="description" placeholder="Tell us about yourself"></textarea>  
+        <br />
+
         <button type="submit">Create account</button>
         
       </form>
