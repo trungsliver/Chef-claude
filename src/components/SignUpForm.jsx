@@ -20,6 +20,9 @@ export default function SignupForm() {
         // checkboxes
         const dietaryRestrictions = formData.getAll("dietaryRestrictions");
         console.log("dietaryRestrictions: ", dietaryRestrictions);
+        // select & options
+        const favColor = formData.get("favColor");
+        console.log("favColor: ", favColor);
     }
 
     return (
@@ -32,15 +35,15 @@ export default function SignupForm() {
                 <br />
 
                 <label htmlFor="password">Password:</label>
-                <input id="password" type="password" name="password" 
-                        placeholder="must be at least 8 characters" required />
+                <input id="password" type="password" name="password"
+                    placeholder="must be at least 8 characters" required />
                 <br />
 
                 {/* Radio buttons */}
                 <fieldset>
                     <legend>Employment Status:</legend>
                     <label>
-                        <input type="radio" name="employmentStatus" value="unemployed"/>
+                        <input type="radio" name="employmentStatus" value="unemployed" />
                         Unemployed
                     </label>
                     <label>
@@ -48,7 +51,7 @@ export default function SignupForm() {
                         Part-time
                     </label>
                     <label>
-                        <input type="radio" name="employmentStatus" value="full-time" defaultChecked={true}/>
+                        <input type="radio" name="employmentStatus" value="full-time" defaultChecked={true} />
                         Full-time
                     </label>
                 </fieldset>
@@ -58,7 +61,7 @@ export default function SignupForm() {
                 <fieldset>
                     <legend>Dietary Restrictions:</legend>
                     <label>
-                        <input type="checkbox" name="dietaryRestrictions" value="kosher"/>
+                        <input type="checkbox" name="dietaryRestrictions" value="kosher" />
                         Kosher
                     </label>
                     <label>
@@ -66,15 +69,34 @@ export default function SignupForm() {
                         Vegan
                     </label>
                     <label>
-                        <input type="checkbox" name="dietaryRestrictions" value="gluten-free" defaultChecked={true}/>
+                        <input type="checkbox" name="dietaryRestrictions" value="gluten-free" defaultChecked={true} />
                         Gluten-free
                     </label>
                 </fieldset>
                 <br />
 
+                {/* Textarea */}
                 <label htmlFor="description">Description:</label>
                 <textarea id="description" name="description" placeholder="Tell us about yourself"></textarea>
                 <br />
+
+                {/* Select & Options */}
+                <div className="favColor-container">
+                    <label className="lb-favColor" htmlFor="favColor">What is your favorite color?</label>
+                    <select name="favColor" id="favColor" defaultValue="">
+                        <option value="">Choose</option>
+                        <option value="Red">Red</option>
+                        <option value="Green">Green</option>
+                        <option value="Blue">Blue</option>
+                        <option value="Yellow">Yellow</option>
+                        <option value="Orange">Orange</option>
+                        <option value="Purple">Purple</option>
+                        <option value="Black">Black</option>
+                        <option value="White">White</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <br />
+                </div>
 
                 <button type="submit">Create account</button>
 

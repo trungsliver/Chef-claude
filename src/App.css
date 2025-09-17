@@ -232,6 +232,7 @@ main {
     gap: 1rem;
     width: 100%;
     max-width: 450px;
+    /* height: fit-content; */
     margin: 0 auto;
     padding: 2rem;
     background-color: #f9f9f9;
@@ -297,4 +298,24 @@ input[type="checkbox"], input[type="radio"] {
   display: inline-block;
   width: 12px !important;
   height: 12px !important;
+}
+
+.favColor-container {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  width: 100%;
+}
+
+.lb-favColor{
+  max-width: unset !important;
+  width: fit-content !important;
+  text-align: left !important;
+  margin-left: 40px;
+}
+
+.favColor-container select {
+  background-color: white;
+  color: #141413;
+  font-size: 0.875rem;
 }
