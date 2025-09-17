@@ -17,6 +17,9 @@ export default function SignupForm() {
         // radio buttons
         const employmentStatus = formData.get("employmentStatus");
         console.log("employmentStatus: ", employmentStatus);
+        // checkboxes
+        const dietaryRestrictions = formData.getAll("dietaryRestrictions");
+        console.log("dietaryRestrictions: ", dietaryRestrictions);
     }
 
     return (
@@ -33,6 +36,7 @@ export default function SignupForm() {
                         placeholder="must be at least 8 characters" required />
                 <br />
 
+                {/* Radio buttons */}
                 <fieldset>
                     <legend>Employment Status:</legend>
                     <label>
@@ -46,6 +50,24 @@ export default function SignupForm() {
                     <label>
                         <input type="radio" name="employmentStatus" value="full-time" defaultChecked={true}/>
                         Full-time
+                    </label>
+                </fieldset>
+                <br />
+
+                {/* Checkbox */}
+                <fieldset>
+                    <legend>Dietary Restrictions:</legend>
+                    <label>
+                        <input type="checkbox" name="dietaryRestrictions" value="kosher"/>
+                        Kosher
+                    </label>
+                    <label>
+                        <input type="checkbox" name="dietaryRestrictions" value="vegan" />
+                        Vegan
+                    </label>
+                    <label>
+                        <input type="checkbox" name="dietaryRestrictions" value="gluten-free" defaultChecked={true}/>
+                        Gluten-free
                     </label>
                 </fieldset>
                 <br />
