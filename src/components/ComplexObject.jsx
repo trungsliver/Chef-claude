@@ -2,6 +2,7 @@ import React from "react";
 import starEmpty from "../assets/star-empty.png"
 import starFilled from "../assets/star-filled.png"
 import avatar from "../assets/user.png"
+import Star from "./Star";
 
 export default function ComplexObject() {
     const [contact, setContact] = React.useState({
@@ -33,7 +34,7 @@ export default function ComplexObject() {
                     alt="User profile picture of John Doe"
                 />
                 <div className="info">
-                    <button
+                    {/* <button
                         onClick={toggleFavorite}
                         aria-pressed={contact.isFavorite}
                         aria-label={contact.isFavorite ? "Remove from favorites" : "Add to favorites"}
@@ -44,7 +45,8 @@ export default function ComplexObject() {
                             alt={contact.isFavorite ? "Filled star icon" : "Empty star icon"}
                             className="favorite"
                         />
-                    </button>
+                    </button> */}
+                    <Star isFilled={contact.isFavorite} handleClick={toggleFavorite} />
                     <h2 className="name">
                         {contact.firstName} {contact.lastName}
                     </h2>
