@@ -8,6 +8,7 @@ import Counter from './components/Counter'
 import ComplexArray from './components/ComplexArray'
 import ComplexObject from './components/ComplexObject'
 import SignupForm from './components/SignupForm'
+import ConditionalRendering from './components/ConditionalRendering'
 
 function App() {
   return (
@@ -17,7 +18,8 @@ function App() {
       {/* <Counter />
       <ComplexArray /> */}
       {/* <ComplexObject />  */}
-      <SignupForm />
+      {/* <SignupForm /> */}
+      <ConditionalRendering />
     </>
   )
 }
